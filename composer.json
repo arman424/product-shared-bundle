@@ -13,7 +13,6 @@
     "symfony/validator": "^6.4",
     "symfony/messenger": "^6.4",
     "doctrine/orm": "^3.5",
-    "symfony/uid": "^6.4",
-    "php-amqplib/php-amqplib": "^3.7"
+    "symfony/uid": "^6.4"
   }
 }

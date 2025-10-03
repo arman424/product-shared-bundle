@@ -4,7 +4,7 @@
   "type": "symfony-bundle",
   "autoload": {
     "psr-4": {
-      "Shared\\Bundle\\": "src/"
+      "SharedBundle\\": "src/"
     }
   },
   "require": {

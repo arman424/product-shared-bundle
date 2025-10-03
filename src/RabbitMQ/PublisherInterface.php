@@ -1,6 +1,6 @@
 <?php
 
-namespace SharedBundle\RabbitMQ;
+namespace Shared\Bundle\RabbitMQ;
 
 interface PublisherInterface
 {

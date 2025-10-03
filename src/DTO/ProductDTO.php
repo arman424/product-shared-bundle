@@ -1,8 +1,8 @@
 <?php
 
-namespace SharedBundle\DTO;
+namespace Shared\Bundle\DTO;
 
-use SharedBundle\Entity\MappedSuperclass\Product;
+use Shared\Bundle\Entity\MappedSuperclass\Product;
 
 class ProductDTO
 {

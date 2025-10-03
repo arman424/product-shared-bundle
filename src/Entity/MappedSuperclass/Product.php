@@ -1,6 +1,6 @@
 <?php
 
-namespace SharedBundle\Entity\MappedSuperclass;
+namespace Shared\Bundle\Entity\MappedSuperclass;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints\Uuid;

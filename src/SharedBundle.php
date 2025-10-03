@@ -1,6 +1,6 @@
 <?php
 
-namespace SharedBundle;
+namespace Shared\Bundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

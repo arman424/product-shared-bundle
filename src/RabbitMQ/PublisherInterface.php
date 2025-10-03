@@ -2,6 +2,8 @@
 
 namespace Shared\Bundle\RabbitMQ;
 
+use Shared\Bundle\DTO\ProductDTO;
+
 interface PublisherInterface
 {
     /**
@@ -10,5 +12,5 @@ interface PublisherInterface
      * @param string $queue
      * @param array $message
      */
-    public function publish(string $queue, array $message): void;
+    public function publish(string $queue, ProductDTO $message): void;
 }

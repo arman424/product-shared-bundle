@@ -3,12 +3,13 @@
 namespace Shared\Bundle\RabbitMQ;
 
 use PhpAmqpLib\Message\AMQPMessage;
+use Shared\Bundle\DTO\ProductDTO;
 
 class RabbitMQPublisher implements PublisherInterface
 {
     public function __construct(private RabbitMQConnectionFactory $connectionFactory) {}
 
-    public function publish(string $queue, array $message): void
+    public function publish(string $queue, ProductDTO $message): void
     {
         $channel = $this->connectionFactory->getChannel();
 

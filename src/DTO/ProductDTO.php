@@ -2,9 +2,10 @@
 
 namespace Shared\Bundle\DTO;
 
+use JsonSerializable;
 use Shared\Bundle\Entity\MappedSuperclass\Product;
 
-final class ProductDTO implements \ProductDTO
+final class ProductDTO implements JsonSerializable
 {
     public string $id;
     public string $name;

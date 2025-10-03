@@ -1,0 +1,17 @@
+{
+  "name": "shared/shared-bundle",
+  "description": "Shared Symfony bundle for Product and Order microservices",
+  "type": "symfony-bundle",
+  "autoload": {
+    "psr-4": {
+      "Shared\\Bundle\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.2",
+    "symfony/framework-bundle": "^6.4",
+    "symfony/validator": "^6.4",
+    "symfony/messenger": "^6.4",
+    "doctrine/orm": "^2.16"
+  }
+}

@@ -1,12 +1,23 @@
 # shared-bundle/src/Resources/config/services.yaml
 services:
-  # Register all services in the bundle automatically
+  # Autoregister everything else
   Shared\Bundle\:
     resource: '../../*'
     exclude: '../../{DependencyInjection,Tests}'
 
-  # Explicit service example
+  # RabbitMQ factory needs parameters
+  Shared\Bundle\RabbitMQ\RabbitMQConnectionFactory:
+    arguments:
+      $host: '%env(RABBITMQ_HOST)%'
+      $port: '%env(int:RABBITMQ_PORT)%'
+      $user: '%env(RABBITMQ_USER)%'
+      $password: '%env(RABBITMQ_PASSWORD)%'
+      $vhost: '%env(RABBITMQ_VHOST)%'
+
+  # Publisher gets factory injected
   Shared\Bundle\RabbitMQ\RabbitMQPublisher:
+    arguments:
+      $connectionFactory: '@Shared\Bundle\RabbitMQ\RabbitMQConnectionFactory'
     autowire: true
     autoconfigure: true
     public: true

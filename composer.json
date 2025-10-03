@@ -12,6 +12,7 @@
     "symfony/framework-bundle": "^6.4",
     "symfony/validator": "^6.4",
     "symfony/messenger": "^6.4",
-    "doctrine/orm": "^3.5"
+    "doctrine/orm": "^3.5",
+    "symfony/uid": "^6.4"
   }
 }

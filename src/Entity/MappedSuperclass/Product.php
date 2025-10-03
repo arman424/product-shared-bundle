@@ -3,7 +3,7 @@
 namespace Shared\Bundle\Entity\MappedSuperclass;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints\Uuid;
+use Symfony\Component\Uid\Uuid;
 
 #[ORM\MappedSuperclass]
 abstract class Product

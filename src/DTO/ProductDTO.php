@@ -4,7 +4,7 @@ namespace Shared\Bundle\DTO;
 
 use Shared\Bundle\Entity\MappedSuperclass\Product;
 
-class ProductDTO
+final class ProductDTO
 {
     public string $id;
     public string $name;
@@ -31,4 +31,3 @@ class ProductDTO
         ];
     }
 }
-

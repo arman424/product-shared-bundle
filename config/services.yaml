@@ -1,0 +1,7 @@
+Shared\Bundle\RabbitMQ\RabbitMQPublisher:
+  autowire: true
+  autoconfigure: true
+  public: true
+
+Shared\Bundle\RabbitMQ\PublisherInterface:
+  alias: Shared\Bundle\RabbitMQ\RabbitMQPublisher

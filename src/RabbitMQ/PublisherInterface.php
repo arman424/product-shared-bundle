@@ -12,4 +12,3 @@ interface PublisherInterface
      */
     public function publish(string $queue, array $message): void;
 }
-

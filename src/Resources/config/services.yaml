@@ -1,0 +1,12 @@
+# shared-bundle/src/Resources/config/services.yaml
+services:
+  # Register all services in the bundle automatically
+  Shared\Bundle\:
+    resource: '../../*'
+    exclude: '../../{DependencyInjection,Tests}'
+
+  # Explicit service example
+  Shared\Bundle\RabbitMQ\RabbitMQPublisher:
+    autowire: true
+    autoconfigure: true
+    public: true

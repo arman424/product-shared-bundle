@@ -1,6 +1,6 @@
 <?php
 
-namespace Shared\Bundle\RabbitMQ;
+namespace Shared\Bundle\Publisher;
 
 use Shared\Bundle\DTO\ProductDTO;
 

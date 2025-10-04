@@ -1,12 +1,9 @@
-# shared-bundle/src/Resources/config/services.yaml
 services:
-  # Autoregister everything else
   Shared\Bundle\:
     resource: '../../*'
     exclude: '../../{DependencyInjection,Tests}'
 
-  # Publisher now only needs the MessageBusInterface
-  Shared\Bundle\RabbitMQ\RabbitMQPublisher:
+  Shared\Bundle\Publisher\ProductPublisher:
     autowire: true
     autoconfigure: true
     public: true

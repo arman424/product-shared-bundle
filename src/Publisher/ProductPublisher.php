@@ -1,12 +1,12 @@
 <?php
 
-namespace Shared\Bundle\RabbitMQ;
+namespace Shared\Bundle\Publisher;
 
 use Shared\Bundle\DTO\ProductDTO;
 use Shared\Bundle\Messaging\ProductMessage;
 use Symfony\Component\Messenger\MessageBusInterface;
 
-readonly class RabbitMQPublisher implements PublisherInterface
+readonly class ProductPublisher implements PublisherInterface
 {
     public function __construct(private MessageBusInterface $messageBus) {}
 

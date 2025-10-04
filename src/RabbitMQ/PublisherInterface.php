@@ -9,8 +9,7 @@ interface PublisherInterface
     /**
      * Publish a message to the given queue.
      *
-     * @param string $queue
      * @param ProductDTO $productDTO
      */
-    public function publish(string $queue, ProductDTO $productDTO): void;
+    public function publish(ProductDTO $productDTO): void;
 }

@@ -5,19 +5,8 @@ services:
     resource: '../../*'
     exclude: '../../{DependencyInjection,Tests}'
 
-  # RabbitMQ factory needs parameters
-  Shared\Bundle\RabbitMQ\RabbitMQConnectionFactory:
-    arguments:
-      $host: '%env(RABBITMQ_HOST)%'
-      $port: '%env(int:RABBITMQ_PORT)%'
-      $user: '%env(RABBITMQ_USER)%'
-      $password: '%env(RABBITMQ_PASSWORD)%'
-      $vhost: '%env(RABBITMQ_VHOST)%'
-
-  # Publisher gets factory injected
-  Shared\Bundle\RabbitMQ\RabbitMQPublisher:
-    arguments:
-      $connectionFactory: '@Shared\Bundle\RabbitMQ\RabbitMQConnectionFactory'
-    autowire: true
-    autoconfigure: true
-    public: true
+    # Publisher now only needs the MessageBusInterface
+    Shared\Bundle\RabbitMQ\RabbitMQPublisher:
+      autowire: true
+      autoconfigure: true
+      public: true

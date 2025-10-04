@@ -5,8 +5,8 @@ services:
     resource: '../../*'
     exclude: '../../{DependencyInjection,Tests}'
 
-    # Publisher now only needs the MessageBusInterface
-    Shared\Bundle\RabbitMQ\RabbitMQPublisher:
-      autowire: true
-      autoconfigure: true
-      public: true
+  # Publisher now only needs the MessageBusInterface
+  Shared\Bundle\RabbitMQ\RabbitMQPublisher:
+    autowire: true
+    autoconfigure: true
+    public: true

@@ -2,10 +2,9 @@
 
 namespace Shared\Bundle\DTO;
 
-use JsonSerializable;
 use Shared\Bundle\Entity\MappedSuperclass\Product;
 
-final class ProductDTO implements JsonSerializable
+final class ProductDTO
 {
     public string $id;
     public string $name;
@@ -22,7 +21,7 @@ final class ProductDTO implements JsonSerializable
         return $dto;
     }
 
-    public function jsonSerialize(): array
+    public function toArray(): array
     {
         return [
             'id' => $this->id,

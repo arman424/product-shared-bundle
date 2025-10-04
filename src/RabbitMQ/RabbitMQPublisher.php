@@ -2,24 +2,17 @@
 
 namespace Shared\Bundle\RabbitMQ;
 
-use PhpAmqpLib\Message\AMQPMessage;
 use Shared\Bundle\DTO\ProductDTO;
+use Shared\Bundle\Messaging\ProductMessage;
+use Symfony\Component\Messenger\MessageBusInterface;
 
 class RabbitMQPublisher implements PublisherInterface
 {
-    public function __construct(private RabbitMQConnectionFactory $connectionFactory) {}
+    public function __construct(private MessageBusInterface $messageBus) {}
 
-    public function publish(string $queue, ProductDTO $message): void
+    public function publish(string $queue, ProductDTO $productDTO): void
     {
-        $channel = $this->connectionFactory->getChannel();
-
-        $channel->queue_declare($queue, false, true, false, false);
-
-        $msg = new AMQPMessage(json_encode($message), [
-            'content_type' => 'application/json',
-            'delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT
-        ]);
-
-        $channel->basic_publish($msg, '', $queue);
+        $message = new ProductMessage($productDTO);
+        $this->messageBus->dispatch($message);
     }
 }

@@ -2,11 +2,9 @@
 
 namespace Shared\Bundle\Messaging;
 
+use Shared\Bundle\DTO\PublishedDTOInterface;
+
 class ProductReservedMessage
 {
-    public function __construct(
-        public string $orderId,
-        public string $productId,
-        public int $quantity,
-    ) {}
+    public function __construct(PublishedDTOInterface $publishedDTO) {}
 }

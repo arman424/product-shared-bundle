@@ -2,14 +2,14 @@
 
 namespace Shared\Bundle\Publisher;
 
-use Shared\Bundle\DTO\ProductDTO;
+use Shared\Bundle\DTO\PublishedDTOInterface;
 
 interface PublisherInterface
 {
     /**
      * Publish a message to the given queue.
      *
-     * @param ProductDTO $productDTO
+     * @param PublishedDTOInterface $publishedDTO
      */
-    public function publish(ProductDTO $productDTO): void;
+    public function publish(PublishedDTOInterface $publishedDTO): void;
 }

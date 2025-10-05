@@ -4,7 +4,7 @@ namespace Shared\Bundle\DTO;
 
 use Shared\Bundle\Entity\MappedSuperclass\Product;
 
-final class ProductDTO
+final class ProductDTO implements PublishedDTOInterface
 {
     public string $id;
     public string $name;

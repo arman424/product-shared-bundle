@@ -2,9 +2,9 @@
 
 namespace Shared\Bundle\Messaging;
 
-use Shared\Bundle\DTO\ProductDTO;
+use Shared\Bundle\DTO\PublishedDTOInterface;
 
 final class ProductMessage
 {
-    public function __construct(public ProductDTO $productDTO) {}
+    public function __construct(PublishedDTOInterface $productDTO) {}
 }

@@ -10,7 +10,7 @@ final class ProductDTO implements PublishedDTOInterface
 {
     public Uuid $id;
     public string $name;
-    public float $price;
+    public int $price;
     public int $quantity;
 
     public static function fromEntity(Product $product): self

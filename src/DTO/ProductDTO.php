@@ -4,10 +4,11 @@ declare(strict_types=1);
 namespace Shared\Bundle\DTO;
 
 use Shared\Bundle\Entity\MappedSuperclass\Product;
+use Symfony\Component\Uid\Uuid;
 
 final class ProductDTO implements PublishedDTOInterface
 {
-    public string $id;
+    public Uuid $id;
     public string $name;
     public float $price;
     public int $quantity;

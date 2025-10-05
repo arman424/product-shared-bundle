@@ -3,10 +3,12 @@ declare(strict_types=1);
 
 namespace Shared\Bundle\DTO;
 
+use Symfony\Component\Uid\Uuid;
+
 final class OrderReservationDTO implements PublishedDTOInterface
 {
-    public string $orderId;
-    public string $productId;
+    public Uuid $orderId;
+    public Uuid $productId;
     public int $quantity;
 
     public static function init(array $orderReservationData): self

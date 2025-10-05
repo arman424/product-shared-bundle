@@ -2,7 +2,7 @@
 
 namespace Shared\Bundle\DTO;
 
-class ProductOutOfStockDTO implements PublishedDTOInterface
+final class ProductOutOfStockDTO implements PublishedDTOInterface
 {
     public string $orderId;
     public int $quantity;

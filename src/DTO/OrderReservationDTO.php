@@ -2,7 +2,7 @@
 
 namespace Shared\Bundle\DTO;
 
-class OrderReservationDTO implements PublishedDTOInterface
+final class OrderReservationDTO implements PublishedDTOInterface
 {
     public string $orderId;
     public string $productId;

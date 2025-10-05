@@ -4,7 +4,7 @@ namespace Shared\Bundle\Messaging;
 
 use Shared\Bundle\DTO\ProductOutOfStockDTO;
 
-class ProductOutOfStockMessage
+final class ProductOutOfStockMessage
 {
     public function __construct(public ProductOutOfStockDTO $productOutOfStockDTO) {}
 }

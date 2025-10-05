@@ -2,9 +2,10 @@
 
 namespace Shared\Bundle\Messaging;
 
-use Shared\Bundle\DTO\PublishedDTOInterface;
-
 class ProductOutOfStockMessage
 {
-    public function __construct(public PublishedDTOInterface $publishedDTO) {}
+    public function __construct(
+        public string $orderId,
+        public string $productId,
+    ) {}
 }

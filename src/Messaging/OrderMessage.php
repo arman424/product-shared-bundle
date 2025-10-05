@@ -6,5 +6,5 @@ use Shared\Bundle\DTO\PublishedDTOInterface;
 
 class OrderMessage
 {
-    public function __construct(PublishedDTOInterface $publishedDTO) {}
+    public function __construct(public PublishedDTOInterface $publishedDTO) {}
 }
